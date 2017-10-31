@@ -14,6 +14,7 @@
 		D63863CB1FA837F000FC745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63863C91FA837F000FC745C /* LaunchScreen.storyboard */; };
 		D63863D51FA8387400FC745C /* Dribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63863D41FA8387400FC745C /* Dribble.swift */; };
 		D63863D81FA838E800FC745C /* MainControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63863D71FA838E800FC745C /* MainControllers.swift */; };
+		D661FF841FA8C48F00867250 /* DetailShotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661FF831FA8C48F00867250 /* DetailShotController.swift */; };
 		D6CEF0271FA8573600215E63 /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF0261FA8573600215E63 /* Shots.swift */; };
 		D6CEF02A1FA8686800215E63 /* ShotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF0291FA8686800215E63 /* ShotsCell.swift */; };
 		D6CEF0301FA8707600215E63 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6CEF02D1FA8706A00215E63 /* Roboto-Bold.ttf */; };
@@ -37,6 +38,7 @@
 		D63863CC1FA837F000FC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63863D41FA8387400FC745C /* Dribble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dribble.swift; sourceTree = "<group>"; };
 		D63863D71FA838E800FC745C /* MainControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllers.swift; sourceTree = "<group>"; };
+		D661FF831FA8C48F00867250 /* DetailShotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShotController.swift; sourceTree = "<group>"; };
 		D6CEF0261FA8573600215E63 /* Shots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
 		D6CEF0291FA8686800215E63 /* ShotsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsCell.swift; sourceTree = "<group>"; };
 		D6CEF02C1FA8706A00215E63 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D63863D71FA838E800FC745C /* MainControllers.swift */,
+				D661FF831FA8C48F00867250 /* DetailShotController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,7 +280,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pixel/Pods-Pixel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSONModel/SwiftyJSONModel.framework",
 			);
@@ -285,7 +290,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSONModel.framework",
 			);
@@ -318,6 +325,7 @@
 			files = (
 				D63863D81FA838E800FC745C /* MainControllers.swift in Sources */,
 				D6CEF03A1FA88BB900215E63 /* UIColorExtensions.swift in Sources */,
+				D661FF841FA8C48F00867250 /* DetailShotController.swift in Sources */,
 				D63863D51FA8387400FC745C /* Dribble.swift in Sources */,
 				D6CEF0361FA870FB00215E63 /* UIFontExtensions.swift in Sources */,
 				D63863C11FA837F000FC745C /* AppDelegate.swift in Sources */,

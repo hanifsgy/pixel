@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Spring
+import Hero
 
 class MainControllers: UIViewController {
     
@@ -43,6 +45,10 @@ class MainControllers: UIViewController {
         
         fetchData()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     func fetchData() {
@@ -103,5 +109,23 @@ extension MainControllers: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(20, 0, 20, 0)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ShotsCell
+        cell.dataShots = dataShots[indexPath.item]
+        let id = cell.dataShots.id
+        
+        let viewDetailController = DetailShotController()
+        viewDetailController.id = id
+        
+        viewDetailController.isHeroEnabled = true
+        viewDetailController.heroModalAnimationType = .zoom
+        HeroTransition().containerColor = .white
+        HeroTransition().transition(from: self, to: viewDetailController, in: UIApplication.shared.keyWindow!) { (finished) in
+            UIApplication.shared.keyWindow!.rootViewController = viewDetailController
+        }
+    }
+    
     
 }

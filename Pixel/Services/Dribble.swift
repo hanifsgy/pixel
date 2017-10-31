@@ -17,4 +17,5 @@ struct Client {
 
 struct Services {
     static var shotsURL = "https://api.dribbble.com/v1/shots?access_token="
+    static var getShot = "https://api.dribbble.com/v1/shots/"
 }

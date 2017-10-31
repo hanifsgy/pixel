@@ -1,12 +1,14 @@
 PODS:
   - Alamofire (4.5.0)
   - FLAnimatedImage (1.0.12)
+  - Hero (1.0.0-alpha.4)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
   - SDWebImage/GIF (4.1.0):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - Spring (1.0.3)
   - SwiftyJSON (3.1.4)
   - SwiftyJSONModel (0.0.9):
     - SwiftyJSON (~> 3.0)
@@ -14,18 +16,32 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - FLAnimatedImage (~> 1.0)
+  - Hero (= 1.0.0-alpha.4)
   - SDWebImage
   - SDWebImage/GIF
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift4`)
   - SwiftyJSON
   - SwiftyJSONModel
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift4
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: b65cb00a1adc7e810e2ad10b174b840b6d520ac3
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  Hero: 6ab58fdfb16c75ce9c6bfad48ef6abb54780b263
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyJSONModel: eb69733538310ac6e1198e237673d233edeb1c02
 
-PODFILE CHECKSUM: 47c1f35415288e3675a4e15c60b2e61471baee1e
+PODFILE CHECKSUM: 2adc2d8bcd65e65c1a8b485fa621a299146c0f66
 
 COCOAPODS: 1.3.1

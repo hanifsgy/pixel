@@ -12,4 +12,6 @@ pod 'SwiftyJSONModel'
 pod 'SDWebImage/GIF'
 pod 'SDWebImage'
 pod 'FLAnimatedImage', '~> 1.0'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
+pod 'Hero', '1.0.0-alpha.4'
 end

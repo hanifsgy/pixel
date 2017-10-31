@@ -11,4 +11,5 @@ pod 'SwiftyJSON'
 pod 'SwiftyJSONModel'
 pod 'SDWebImage/GIF'
 pod 'SDWebImage'
+pod 'FLAnimatedImage', '~> 1.0'
 end

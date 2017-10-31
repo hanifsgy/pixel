@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SDWebImage
-
+import FLAnimatedImage
 
 class ShotsCell: UICollectionViewCell {
     
@@ -18,14 +18,23 @@ class ShotsCell: UICollectionViewCell {
         didSet {
             let urlimages = URL(string: dataShots.images)!
             print(urlimages)
-            self.imageShot.sd_setImage(with: urlimages, placeholderImage: nil)
+            if urlimages.absoluteString.contains(".gif") {
+                print("gif files")
+                self.imageShot.sd_setImage(with: urlimages, placeholderImage: nil)
+                self.titleGIF.isHidden = false
+            } else {
+                self.titleGIF.isHidden = true
+                self.imageShot.sd_setImage(with: urlimages, placeholderImage: nil)
+            }
+            self.imageShot.sd_setShowActivityIndicatorView(true)
+            self.imageShot.sd_setIndicatorStyle(.gray)
             self.titleShots.text = dataShots.title
         }
     }
     
     
-    let imageShot: UIImageView = {
-       let image = UIImageView()
+    let imageShot: FLAnimatedImageView = {
+       let image = FLAnimatedImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
         image.layer.masksToBounds = true
@@ -38,11 +47,24 @@ class ShotsCell: UICollectionViewCell {
        let likes = UILabel()
         likes.translatesAutoresizingMaskIntoConstraints = false
         likes.textColor = UIColor.white
+        likes.textAlignment = .left
         likes.text = "Fluent inspired E-mail app "
-        likes.font = UIFont().robotoLight(size: 18)
+        likes.font = UIFont().robotoMedium(size: 18)
         likes.numberOfLines = 2
         likes.adjustsFontSizeToFitWidth = true
         return likes
+    }()
+    
+    let titleGIF: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor.white
+        label.textColor = UIColor.black
+        label.font = UIFont().robotoBold(size: 10)
+        label.text = "GIF"
+        label.textAlignment = .center
+        label.isHidden = true
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -57,7 +79,7 @@ class ShotsCell: UICollectionViewCell {
     func setupView() {
         contentView.addSubview(imageShot)
         imageShot.addSubview(titleShots)
-        
+        imageShot.addSubview(titleGIF)
         
         contentView.layer.cornerRadius = 10
         contentView.layer.borderWidth = 1.0
@@ -79,7 +101,12 @@ class ShotsCell: UICollectionViewCell {
                 titleShots.bottomAnchor.constraint(equalTo: imageShot.bottomAnchor, constant: -16),
                 titleShots.leftAnchor.constraint(equalTo: imageShot.leftAnchor, constant: 16),
                 titleShots.widthAnchor.constraint(equalTo: imageShot.widthAnchor, constant: -32),
-                titleShots.heightAnchor.constraint(equalToConstant: 48)
+                titleShots.heightAnchor.constraint(equalToConstant: 48),
+                
+                titleGIF.rightAnchor.constraint(equalTo: imageShot.rightAnchor, constant: -16),
+                titleGIF.topAnchor.constraint(equalTo: imageShot.topAnchor, constant: 16),
+                titleGIF.heightAnchor.constraint(equalToConstant: 10),
+                titleGIF.widthAnchor.constraint(equalToConstant: 16)
             
         ])
         

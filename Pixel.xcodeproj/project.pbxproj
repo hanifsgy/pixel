@@ -15,6 +15,12 @@
 		D63863D51FA8387400FC745C /* Dribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63863D41FA8387400FC745C /* Dribble.swift */; };
 		D63863D81FA838E800FC745C /* MainControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63863D71FA838E800FC745C /* MainControllers.swift */; };
 		D6CEF0271FA8573600215E63 /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF0261FA8573600215E63 /* Shots.swift */; };
+		D6CEF02A1FA8686800215E63 /* ShotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF0291FA8686800215E63 /* ShotsCell.swift */; };
+		D6CEF0301FA8707600215E63 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6CEF02D1FA8706A00215E63 /* Roboto-Bold.ttf */; };
+		D6CEF0311FA8707600215E63 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6CEF02C1FA8706A00215E63 /* Roboto-Light.ttf */; };
+		D6CEF0321FA8707600215E63 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6CEF02F1FA8706A00215E63 /* Roboto-Medium.ttf */; };
+		D6CEF0331FA8707600215E63 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6CEF02E1FA8706A00215E63 /* Roboto-Regular.ttf */; };
+		D6CEF0361FA870FB00215E63 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEF0351FA870FB00215E63 /* UIFontExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		D63863D41FA8387400FC745C /* Dribble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dribble.swift; sourceTree = "<group>"; };
 		D63863D71FA838E800FC745C /* MainControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllers.swift; sourceTree = "<group>"; };
 		D6CEF0261FA8573600215E63 /* Shots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
+		D6CEF0291FA8686800215E63 /* ShotsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsCell.swift; sourceTree = "<group>"; };
+		D6CEF02C1FA8706A00215E63 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D6CEF02D1FA8706A00215E63 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		D6CEF02E1FA8706A00215E63 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D6CEF02F1FA8706A00215E63 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		D6CEF0351FA870FB00215E63 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,8 @@
 		D63863BF1FA837F000FC745C /* Pixel */ = {
 			isa = PBXGroup;
 			children = (
+				D6CEF0341FA870EA00215E63 /* Extension */,
+				D6CEF0281FA8684E00215E63 /* View */,
 				D6CEF0251FA856D200215E63 /* Model */,
 				D63863D61FA838DB00FC745C /* Controllers */,
 				D63863D31FA8386600FC745C /* Services */,
@@ -95,6 +109,7 @@
 		D63863D21FA8384000FC745C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D6CEF02B1FA8703600215E63 /* Fonts */,
 				D63863C41FA837F000FC745C /* Main.storyboard */,
 				D63863C71FA837F000FC745C /* Assets.xcassets */,
 				D63863C91FA837F000FC745C /* LaunchScreen.storyboard */,
@@ -124,6 +139,33 @@
 				D6CEF0261FA8573600215E63 /* Shots.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D6CEF0281FA8684E00215E63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6CEF0291FA8686800215E63 /* ShotsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6CEF02B1FA8703600215E63 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D6CEF02D1FA8706A00215E63 /* Roboto-Bold.ttf */,
+				D6CEF02C1FA8706A00215E63 /* Roboto-Light.ttf */,
+				D6CEF02F1FA8706A00215E63 /* Roboto-Medium.ttf */,
+				D6CEF02E1FA8706A00215E63 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D6CEF0341FA870EA00215E63 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D6CEF0351FA870FB00215E63 /* UIFontExtensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +230,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CEF0301FA8707600215E63 /* Roboto-Bold.ttf in Resources */,
+				D6CEF0311FA8707600215E63 /* Roboto-Light.ttf in Resources */,
+				D6CEF0321FA8707600215E63 /* Roboto-Medium.ttf in Resources */,
+				D6CEF0331FA8707600215E63 /* Roboto-Regular.ttf in Resources */,
 				D63863CB1FA837F000FC745C /* LaunchScreen.storyboard in Resources */,
 				D63863C81FA837F000FC745C /* Assets.xcassets in Resources */,
 				D63863C61FA837F000FC745C /* Main.storyboard in Resources */,
@@ -223,12 +269,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pixel/Pods-Pixel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSONModel/SwiftyJSONModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSONModel.framework",
 			);
@@ -261,8 +311,10 @@
 			files = (
 				D63863D81FA838E800FC745C /* MainControllers.swift in Sources */,
 				D63863D51FA8387400FC745C /* Dribble.swift in Sources */,
+				D6CEF0361FA870FB00215E63 /* UIFontExtensions.swift in Sources */,
 				D63863C11FA837F000FC745C /* AppDelegate.swift in Sources */,
 				D6CEF0271FA8573600215E63 /* Shots.swift in Sources */,
+				D6CEF02A1FA8686800215E63 /* ShotsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

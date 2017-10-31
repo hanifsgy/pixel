@@ -9,4 +9,6 @@ target 'Pixel' do
 pod 'Alamofire', '~> 4.5'
 pod 'SwiftyJSON'
 pod 'SwiftyJSONModel'
+pod 'SDWebImage/GIF'
+pod 'SDWebImage'
 end

@@ -17,15 +17,12 @@ class ShotsCell: UICollectionViewCell {
     var dataShots: Shots! {
         didSet {
             let urlimages = URL(string: dataShots.images)!
-            print(urlimages)
             if urlimages.absoluteString.contains(".gif") {
-                print("gif files")
-                self.imageShot.sd_setImage(with: urlimages, placeholderImage: nil)
                 self.titleGIF.isHidden = false
             } else {
                 self.titleGIF.isHidden = true
-                self.imageShot.sd_setImage(with: urlimages, placeholderImage: nil)
             }
+            self.imageShot.sd_setImage(with: urlimages, placeholderImage: nil)
             self.imageShot.sd_setShowActivityIndicatorView(true)
             self.imageShot.sd_setIndicatorStyle(.gray)
             self.titleShots.text = dataShots.title
@@ -55,8 +52,8 @@ class ShotsCell: UICollectionViewCell {
         return likes
     }()
     
-    let titleGIF: UILabel = {
-       let label = UILabel()
+    let titleGIF: UITextView = {
+       let label = UITextView()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.white
         label.textColor = UIColor.black
@@ -64,6 +61,10 @@ class ShotsCell: UICollectionViewCell {
         label.text = "GIF"
         label.textAlignment = .center
         label.isHidden = true
+        label.layer.cornerRadius = 2
+        label.isEditable = false
+        label.isSelectable = false
+        label.textContainerInset = UIEdgeInsetsMake(3, 2, 2, 2)
         return label
     }()
     
@@ -105,8 +106,8 @@ class ShotsCell: UICollectionViewCell {
                 
                 titleGIF.rightAnchor.constraint(equalTo: imageShot.rightAnchor, constant: -16),
                 titleGIF.topAnchor.constraint(equalTo: imageShot.topAnchor, constant: 16),
-                titleGIF.heightAnchor.constraint(equalToConstant: 10),
-                titleGIF.widthAnchor.constraint(equalToConstant: 16)
+                titleGIF.heightAnchor.constraint(equalToConstant: 18),
+                titleGIF.widthAnchor.constraint(equalToConstant: 30)
             
         ])
         

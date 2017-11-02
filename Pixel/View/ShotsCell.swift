@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SDWebImage
 import FLAnimatedImage
+import Cards
 
 class ShotsCell: UICollectionViewCell {
     
@@ -67,6 +68,13 @@ class ShotsCell: UICollectionViewCell {
         label.textContainerInset = UIEdgeInsetsMake(3, 2, 2, 2)
         return label
     }()
+    
+    let cardsShots: CardArticle = {
+       let cards = CardArticle()
+        cards.translatesAutoresizingMaskIntoConstraints = false
+        return cards
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
